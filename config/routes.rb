@@ -1,4 +1,10 @@
 Antalien::Application.routes.draw do
+  
+
+  get 'buysell' => 'pages#buysell'
+
+  root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
