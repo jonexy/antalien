@@ -1,7 +1,10 @@
 Antalien::Application.routes.draw do
   
 
+  devise_for :users
+
   get 'buysell' => 'pages#buysell'
+  get 'lease' => 'pages#lease'
 
   root :to => 'pages#home'
 
