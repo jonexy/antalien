@@ -1,6 +1,9 @@
 Antalien::Application.routes.draw do
   
 
+  resources :posts
+
+
   devise_for :users
 
   get 'buysell' => 'pages#buysell'
