@@ -2,10 +2,14 @@
 	<div class="span6 offset3">
 		<div class="well">
 			<p>
-			  <b>Description:</b>
 			  <%= @post.description %>
 			</p>
-			  <%= link_to 'Edit', edit_post_path(@post) %> |
+			<p>
+			  <%= @post.user.name %>
+			</p>
+				<% if current_user == @post.user %>
+			  	<%= link_to 'Edit', edit_post_path(@post) %> |
+			  <% end %>
 				<%= link_to 'Back', posts_path %>
 		</div>
 	</div>

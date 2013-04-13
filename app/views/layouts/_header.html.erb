@@ -10,11 +10,16 @@
                 <div class="nav-collapse">		
                     <ul class="nav">
                         <li>
-                            <%= link_to "Lease", lease_path %>
+                          <%= link_to "Lease", lease_path %>
                         </li>
                         <li>    
-                            <%= link_to "Buy / Sell", buysell_path %>
+                          <%= link_to "Buy / Sell", buysell_path %>
                         </li>
+                        <% if user_signed_in? %>
+                        <li>
+                          <%= link_to 'View Posts', posts_path %>
+                        </li>
+                        <% end %>
                     </ul>
                     <ul class="nav pull-right">
                                 <% if user_signed_in? %>
